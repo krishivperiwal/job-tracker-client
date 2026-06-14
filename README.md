@@ -1,16 +1,47 @@
-# React + Vite
+# Job Tracker Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend for the Job Tracker API. Built with Vite, React, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live Demo
+[job-tracker-client.vercel.app](https://job-tracker-client.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- JWT authentication with protected routes
+- Create and manage job applications
+- Filter applications by status
+- Per-application detail page with full edit capability
+- Interview stage tracking — add, update result, delete stages
+- Resume upload directly from the UI
+- Analytics dashboard — status breakdown with progress bars
 
-## React Compiler
+## Tech Stack
+- React 18 + Vite
+- React Router v6
+- Axios with JWT interceptor
+- React Hook Form
+- Context API for global auth state
+- Tailwind CSS v3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pages
+| Page | Route | Description |
+|------|-------|-------------|
+| Login | /login | JWT login |
+| Signup | /signup | Register account |
+| Dashboard | /dashboard | Overview and navigation |
+| Applications | /applications | Create and list applications |
+| Application Detail | /applications/:id | Edit, upload resume, manage interviews |
+| Analytics | /analytics | Status breakdown and counts |
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/krishivperiwal/job-tracker-client
+cd job-tracker-client
+npm install
+npm run dev
+```
+
+Make sure the backend is running on `http://localhost:5000`.
+
+## Backend
+API repo: [job-tracker-api](https://github.com/krishivperiwal/job-tracker-api)
